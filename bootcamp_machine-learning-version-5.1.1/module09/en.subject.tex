@@ -1,0 +1,149 @@
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={4.0},
+]{doclicense}
+\usepackage{amsmath} % The amsmath package provides commands to typeset matrices with different delimiters. 
+\usepackage{epigraph}
+\setlength\epigraphwidth{.95\textwidth}
+\usepackage{multirow}
+\usepackage{cancel}
+%****************************************************************%
+%                  Re/definition of commands                     %
+%****************************************************************%
+\input{../resources/latex/redefinition-commands.tex}
+%****************************************************************%
+%                 END Re/definition of commands                  %
+%****************************************************************%
+\usemintedstyle{native}
+\begin{document}
+
+% =============================================================================%
+%                     =====================================   
+
+\title{Machine Learning Bootcamp - Module 04}
+\subtitle{Regularization}
+\author{
+  Maxime Choulika (cmaxime), Pierre Peigné (ppeigne), Matthieu David (mdavid), Amir Mahla (amahla), Mathieu Perez (maperez)
+}
+\summary
+{
+  Today you will fight \textbf{overfitting}!
+  You will discover the concepts of \textbf{regularization} and how to implement it into the algorithms you know.
+}
+\maketitle
+\input{useful_resources.tex}
+\input{../resources/42ai_bootcamps/en.instructions.tex}
+\newpage
+\tableofcontents
+\startexercices
+
+%                     =====================================                    %
+% =============================================================================%
+
+
+%******************************************************************************%
+%                                                                              %
+%                                   Exercises                                  %
+%                                                                              %
+%******************************************************************************%
+
+% ============================================== %
+% ===========================(start ex 00)       %
+\input{exercises/m09ex00.tex}
+% ===========================(fin ex 00)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 01)       %
+\input{exercises/m09ex01.tex}
+% ===========================(fin ex 01)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 02)       %
+\input{exercises/m09ex02.tex}
+% ===========================(fin ex 02)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 03)       %
+\input{exercises/m09ex03.tex}
+% ===========================(fin ex 03)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 04)       %
+\input{exercises/m09ex04.tex}
+% ===========================(fin ex 04)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 05)       %
+\input{exercises/m09ex05.tex}
+% ===========================(fin ex 05)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 06)       %
+\input{exercises/m09ex06.tex}
+% ===========================(fin ex 06)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 07)       %
+\input{exercises/m09ex07.tex}
+% ===========================(fin ex 07)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 08)       %
+\input{exercises/m09ex08.tex}
+% ===========================(fin ex 08)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 09)       %
+\input{exercises/m09ex09.tex}
+% ===========================(fin ex 09)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(Conclusion)        %
+\chapter{Conclusion - What you have learnt}
+
+This Machine Learning Bootcamp is over, congratulations !\\
+\newline
+Based on all the notions and problems
+tackled today, you should be able to discuss and answer the following questions:
+\begin{enumerate}
+  \item Why do we use the logistic hypothesis for a classfication problem rather than a linear hypothesis?
+  \item What is the decision boundary?
+  \item In the case we decide to use a linear hypothesis to tackle a classification problem, why does considering more examples
+   (for example, extra data points with extreme ordinate) can alter the classification of some data points ?  
+  \item In a one versus all classification approach, how many logisitic regressor(s) do we need to distinguish between N classes?
+  \item Can you explain the difference between accuracy and precision?\newline
+  What are the type I and type II errors?
+  \item What is the purpose and interest of the F1-score?
+\end{enumerate}
+\info{
+  Your feedbacks are essential for us to improve these bootcamps !\newline
+  Please take a few minutes to tell us about your experience in this module by filling 
+  \href{https://docs.google.com/forms/d/e/1FAIpQLScImy0QtCvRLX9EzVt4q6c23ryMobb6p-hf-l9F0z7uAEV0zA/viewform?usp=sharing}{this form}. Thank you in advance ! 
+}
+
+% ===========================(Conclusion)        %
+% ============================================== %
+\newpage
+\input{../resources/42ai_bootcamps/en.acknowledgements.tex}
+% ================================= %
+\end{document}

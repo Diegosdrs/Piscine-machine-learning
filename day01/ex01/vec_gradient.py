@@ -6,24 +6,37 @@
 #    By: dsindres <dsindres@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/11 10:10:38 by dsindres          #+#    #+#              #
-#    Updated: 2025/03/26 13:14:45 by dsindres         ###   ########.fr        #
+#    Updated: 2025/03/27 10:35:49 by dsindres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import numpy as np
 
-def simple_gradient(x, y, theta):
-    if not isinstance(y, np.ndarray) or not isinstance(x, np.ndarray) or not isinstance(theta, np.ndarray):
+def gradient(x, y, theta):
+    if not isinstance(x, np.ndarray) or not isinstance(y, np.ndarray) or not isinstance(theta, np.ndarray):
         return None
-    if y.size == 0 or y.size == 0 or theta.size == 0:
+    if x.size == 0 or y.size == 0 or theta.size == 0:
         return None
-    if x.ndim != 2 or y.ndim != 2 or theta.ndim != 2:
+    if x.shape[0] != y.shape[0] or theta.shape != (2, 1):
         return None
+    if x.ndim == 1:
+        x = x.reshape(-1, 1)
 
-    
-    
+    # Construction de X' en ajoutant une colonne de 1
+    X_prime = np.c_[np.ones(x.shape[0]), x]
 
-        
+    # Nombre d'exemples
+    m = x.shape[0]
+
+    # Calcul du gradient vectorisé
+    gradient = (1 / m) * (X_prime.T @ (X_prime @ theta - y))
+
+    # X_prime * theta [ou] y_hat * theta = PREDICTION
+    # PREDICTION - y = ERREUR entre la vrai valeur et la prediction
+    # X_prime.T est la transposée de X_prime
+
+    return gradient
+    
 
 if __name__ == "__main__":
     # Exemple 0 :

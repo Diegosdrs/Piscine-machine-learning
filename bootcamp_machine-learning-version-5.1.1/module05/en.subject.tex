@@ -1,0 +1,155 @@
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={4.0},
+]{doclicense}
+\usepackage{amsmath} % The amsmath package provides commands to typeset matrices with different delimiters. 
+\usepackage{epigraph}
+\usepackage[parfill]{parskip}
+\setlength\epigraphwidth{.95\textwidth}
+%****************************************************************%
+%                  Re/definition of commands                     %
+%****************************************************************%
+\input{../resources/latex/redefinition-commands.tex}
+%****************************************************************%
+%                 END Re/definition of commands                  %
+%****************************************************************%
+\usemintedstyle{native}
+\begin{document}
+
+% =============================================================================%
+%                     =====================================                    %
+
+\title{Machine Learning Bootcamp - Module 00}
+\subtitle{Stepping into Machine Learning}
+\author{
+  Maxime Choulika (cmaxime), Pierre Peigné (ppeigne), Matthieu David (mdavid),
+   Amir Mahla (amahla), Mathieu Perez (maperez)
+}
+
+\summary
+{
+You will start by reviewing some linear algebra and statistics.
+Then, you will implement your first model and learn how to evaluate its performances.
+}
+
+\maketitle
+\input{useful_resources.tex}
+\input{../resources/42ai_bootcamps/en.instructions.tex}
+\newpage
+\tableofcontents
+\startexercices
+
+%                     =====================================                    %
+% =============================================================================%
+
+
+%******************************************************************************%
+%                                                                              %
+%                                   Exercises                                  %
+%                                                                              %
+%******************************************************************************%
+
+% ============================================== %
+% ===========================(start ex 00)       %
+\input{exercises/m05ex00.tex}
+% ===========================(fin ex 00)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 01)       %
+\input{exercises/m05ex01.tex}
+% ===========================(fin ex 01)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 02)       %
+\input{exercises/m05ex02.tex}
+% ===========================(fin ex 02)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 03)       %
+\input{exercises/m05ex03.tex}
+% ===========================(fin ex 03)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 04)       %
+\input{exercises/m05ex04.tex}
+% ===========================(fin ex 04)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 05)       %
+\input{exercises/m05ex05.tex}
+% ===========================(fin ex 05)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 06)       %
+\input{exercises/m05ex06.tex}
+% ===========================(fin ex 06)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 07)       %
+\input{exercises/m05ex07.tex}
+% ===========================(fin ex 07)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 08)       %
+\input{exercises/m05ex08.tex}
+% ===========================(fin ex 08)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 09)       %
+\input{exercises/m05ex09.tex}
+% ===========================(fin ex 09)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% Closing Chapter %
+\chapter{Conclusion - What you have learnt}
+
+This first series of exercises is finished, well done!
+
+Based on all the notions and problems tackled today, you should be able to discuss and answer the following questions:
+\begin{enumerate}
+  \item Why do we concatenate a column of ones to the left of the $x$ vector when we use the linear algebra trick?   
+  
+  \item Why does the loss function square the distances between the data points and their predicted values?
+  
+  \item What does the loss function's output represent?
+  
+  \item Towards which value do we want the loss function to tend? What would that mean? 
+  
+  \item Do you understand why matrix multiplications are not commutative?
+\end{enumerate}
+
+These questions are an opportunity for discussion among your peers, or to simply reflect on your own acquired understanding during this day !\\
+\newline
+\info{
+  Your feedbacks are essential for us to improve these bootcamps !\newline
+  Please take a few minutes to tell us about your experience in this module by filling 
+  \href{https://forms.gle/RnXgzgZZJh7V8h9D8}{this form}. Thank you in advance ! 
+}
+
+% ============================================== %
+\newpage
+% ================================= %
+
+\input{../resources/42ai_bootcamps/en.acknowledgements.tex}
+
+\end{document}

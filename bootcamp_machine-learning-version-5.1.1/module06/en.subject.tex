@@ -1,0 +1,130 @@
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={4.0},
+]{doclicense}
+\usepackage{amsmath} % The amsmath package provides commands to typeset matrices with different delimiters. 
+\usepackage{epigraph}
+\setlength\epigraphwidth{.95\textwidth}
+%****************************************************************%
+%                  Re/definition of commands                     %
+%****************************************************************%
+\input{../resources/latex/redefinition-commands.tex}
+%****************************************************************%
+%                 END Re/definition of commands                  %
+%****************************************************************%
+\usemintedstyle{native}
+
+\begin{document}
+
+% =============================================================================%
+%                     =====================================                    %
+
+\title{Machine Learning Bootcamp - Module 01}
+\subtitle{Univariate Linear Regression}
+\author{
+  Maxime Choulika (cmaxime), Pierre Peigné (ppeigne), Matthieu David (mdavid), Amir Mahla (amahla), Mathieu Perez (maperez)
+}
+
+\summary
+{
+  Today you will implement a crucial method to improve your model's performance: \textbf{gradient descent}.
+  Then you will discover the notion of \textbf{normalization}.
+}
+
+\maketitle
+\input{useful_resources.tex}
+\input{../resources/42ai_bootcamps/en.instructions.tex}
+\newpage
+\tableofcontents
+\startexercices
+
+%                     =====================================                    %
+% =============================================================================%
+
+
+%******************************************************************************%
+%                                                                              %
+%                                   Exercises                                  %
+%                                                                              %
+%******************************************************************************%
+
+% ============================================== %
+% ===========================(start ex 00)       %
+\input{exercises/m06ex00.tex}
+% ===========================(fin ex 00)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 01)       %
+\input{exercises/m06ex01.tex}
+% ===========================(fin ex 01)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 02)       %
+\input{exercises/m06ex02.tex}
+% ===========================(fin ex 02)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 03)       %
+\input{exercises/m06ex03.tex}
+% ===========================(fin ex 03)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 04)       %
+\input{exercises/m06ex04.tex}
+% ===========================(fin ex 04)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 05)       %
+\input{exercises/m06ex05.tex}
+% ===========================(fin ex 05)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ===========================(start ex 06)       %
+\input{exercises/m06ex06.tex}
+% ===========================(fin ex 06)         %
+% ============================================== %
+\newpage
+% ============================================== %
+% ========================== Closing Chapter     %
+\chapter{Conclusion - What you have learnt}
+
+You are now done with module01, congratulations!
+
+Based on all the notions and problems tackled today, you should be able to discuss and answer the following questions:
+\begin{enumerate}
+  \item What is a hypothesis and what is its goal?  
+  \item What is the loss function and what does it represent?   
+  \item What is Linear Gradient Descent and what does it do?  
+  (hint: you have to talk about J, its gradient and the theta parameters...)  
+  \item What happens if you choose a learning rate that is too large?
+  \item What happens if you choose a very small learning rate, but still a sufficient number of cycles?
+  \item Can you explain MSE and what it measures?
+\end{enumerate}
+\info{
+  Your feedbacks are essential for us to improve these bootcamps !\newline
+  Please take a few minutes to tell us about your experience in this module by filling 
+  \href{https://docs.google.com/forms/d/e/1FAIpQLSc1fQZrq32B3VQvzJwYbjGnMuQMOVBYbVBom5_fDonEgyjXPg/viewform?usp=sharing}{this form}.
+  Thank you in advance ! 
+}
+% ========================= end Closing Chapter  %
+% ============================================== %
+\newpage
+\input{../resources/42ai_bootcamps/en.acknowledgements.tex}
+
+\end{document}

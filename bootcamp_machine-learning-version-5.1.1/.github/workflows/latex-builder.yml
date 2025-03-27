@@ -1,0 +1,62 @@
+
+name: Latex Builder
+
+on: [push]
+
+jobs:
+  make-it:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Install LaTex utilities
+        run: sudo apt update && sudo apt-get install -y texlive-full
+      - name: Get version from file
+        run: echo "::set-output name=version::$(cat version)"
+        id: version
+      - name: Build PDFs
+        run: make
+  release-it:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    if: contains(github.ref, 'master')
+    needs: [make-it]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install LaTex utilities
+        run: sudo apt update && sudo apt-get install -y texlive-full
+      - name: Get version from file
+        id: get_version
+        run: echo "VERSION=version/$(cat version)" >> $GITHUB_ENV
+      - name: Name release from version
+        id: get_release
+        run: echo "RELEASE=release_$(cat version)" >> $GITHUB_ENV
+      - name: Build PDFs
+        run: make
+      - name: Upload PDFs archives
+        uses: actions/upload-artifact@v4
+        with:
+          name: modules.pdf
+          path: |
+            build/module05.pdf
+            build/module06.pdf
+            build/module07.pdf
+            build/module08.pdf
+            build/module09.pdf
+      - name: Bundle Release 
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/module05.pdf
+            build/module06.pdf
+            build/module07.pdf
+            build/module08.pdf
+            build/module09.pdf
+          name: ${{env.RELEASE}}
+          tag_name: ${{env.VERSION}}
+          make_latest: true
+          body_path: CHANGELOG.md
